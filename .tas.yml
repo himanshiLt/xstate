@@ -1,18 +1,18 @@
----
+--- 
+configFile: ~
 framework: jest
-preRun:
-  command:
-    - yarn install
-    - yarn build
-    - yarn run
-preMerge:
-  pattern:
+postMerge: 
+  pattern: 
     - "./packages/**/test/*.test.{ts,tsx}"
-postMerge:
-  pattern:
-    - "./packages/**/test/*.test.{ts,tsx}"
-postRun:
-  command:
-    - node --version
-configFile: jest.config.js
+postRun: 
+  command: 
+    - "node --version"
+preMerge: 
+  pattern: 
+    - "./packages/**/test/*.test.{ts,tsx}
+preRun: 
+  command: 
+    - "yarn install"
+    - "yarn build"
+    - "yarn run"
 version: 1.0
